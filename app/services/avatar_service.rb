@@ -5,6 +5,6 @@ class AvatarService
   end
 
   def self.get_characters_by_nation(nation)
-    get_url("https://last-airbender-api.herokuapp.com/api/v1/characters?affiliation=#{nation}&perPage=100")
+    get_url("https://last-airbender-api.herokuapp.com/api/v1/characters?affiliation=#{nation}&perPage=200")
   end
 end
