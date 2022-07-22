@@ -1,7 +1,7 @@
 <h1>Characters</h1>
-<h3>Number of Characters in Nation: <%= @characters.count %></h3>
+<h3>Number of Characters in <%= params[:nation].titleize %>: <%= @characters.count %></h3>
 
-<% @characters.each_with_index do |character, index| %>
+<% @characters.first(25).each_with_index do |character, index| %>
   <div id="character-<%= index %>">
   <h2><%= character.name %></h2>
   <% if !character.image.nil?%>
@@ -19,6 +19,8 @@
       <li><%= enemy %></li>
     </ul>
   <% end %>
+  <p>Affiliation:
+  <%= character.affiliation %></p>
   </div>
   <br>
 <% end %>

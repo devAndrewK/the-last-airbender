@@ -10,6 +10,10 @@ RSpec.describe 'Search Index Page' do
       expect(page).to have_content("Chan")
       expect(page).to have_content("Ozai")
       expect(page).to have_content("Earth Kingdom")
+      expect(page).to_not have_content("Circus master")
+      expect(page).to_not have_content("Ty Lee")
+      expect(page).to_not have_content("Appa")
+      expect(page).to_not have_content("Fire Nation circus")
     end
   end
 end

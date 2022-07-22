@@ -4,9 +4,9 @@ class Character
   def initialize(data)
     @id = data[:_id]
     @name = data[:name]
-    @allies = data[:allies]||= ["None"]
+    @allies = data[:allies]
     @affiliation = data[:affiliation]
-    @enemies = data[:enemies] ||= ["None"]
+    @enemies = data[:enemies]
     @image = data[:photoUrl]
     if @allies.empty?
       @allies = ['None']
