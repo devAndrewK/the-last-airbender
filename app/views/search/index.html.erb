@@ -1,0 +1,23 @@
+<h1>Characters</h1>
+
+<% @characters.each_with_index do |character, index| %>
+  <div id="character-<%= index %>">
+  <h2><%= character.name %></h2>
+  <% if !character.image.nil?%>
+    <%= image_tag(character.image) %>
+  <% end %>
+  <p>Allies:</p>
+  <% character.allies.each do |ally| %>
+    <ul>
+      <li><%= ally %></li>
+    </ul>
+  <% end %>
+  <p>Enemies:</p>
+  <% character.enemies.each do |enemy| %>
+    <ul>
+      <li><%= enemy %></li>
+    </ul>
+  <% end %>
+  </div>
+  <br>
+<% end %>
